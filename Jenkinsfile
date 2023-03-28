@@ -5,7 +5,7 @@ node
   
  stage('Checkout')
  {
- 	git branch: 'development', credentialsId: 'bed5a851-d84d-412e-87e7-bf9ce23c0e0e', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+ 	git credentialsId: 'ebc00fd9-71e6-4733-9585-ca4104f98e2b', url: 'https://github.com/Sandeep6478/https-github.com-MithunTechnologiesDevOps-maven-web-application.git'
  
  }
  /*
@@ -27,7 +27,7 @@ node
  stage('DeployAppintoTomcat')
  {
  sshagent(['cd93d61f-2d0f-4c60-8b33-34cf4fa888b0']) {
-  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.235.132.183:/opt/apache-tomcat-9.0.29/webapps/"
+  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.48.143:/opt/apache-tomcat-9.0.73/webapps/"
  }
  }
 */
